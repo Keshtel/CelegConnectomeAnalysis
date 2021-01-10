@@ -4,7 +4,7 @@ function ConnMat = XlsxToMat(ConnectivityExcelFile, delNum)
 %body wall muscles, other end organs and sex specific neurons-1: only eliminating
 %body wall muscles and other end organs-2: not eliminating anything
 %
-sheets = sheetnames(ConnectivityExcelFile)
+sheets = sheetnames(ConnectivityExcelFile);
 connJuly=readmatrix(ConnectivityExcelFile);
 connJuly(:,[1:3 (end-16):end])=[];%eliminateing the first three columns because the contain no number
 
